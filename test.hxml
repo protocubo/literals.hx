@@ -1,0 +1,6 @@
+--interp
+-main Test
+-lib literals
+-lib utest
+-cp test
+
