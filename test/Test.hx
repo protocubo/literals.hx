@@ -7,9 +7,24 @@ class Test {
 	function test_doctrim()
 	{
 		equals("foo\nbar\nred",
-		"foo
-		bar
-		red".doctrim());
+			"foo
+			bar
+			red".doctrim());
+		equals("foo\nbar\nred", "
+			foo
+			bar
+			red
+			".doctrim());
+
+		equals("foo\n\tbar\nred",
+			"foo
+				bar
+			red".doctrim());
+		equals("foo\n\tbar\nred", "
+			foo
+				bar
+			red
+			".doctrim());
 	}
 
 	static function main()
